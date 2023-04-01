@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CDN para JQuery. Servicio que permite incluir codigo de la librera desde los servidores de algunas empresas-->
+</head>
+<body>
+    <h1>Prueba de la llamada a JQuery</h1>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script>
+        $.ajax({
+            type: "POST", //metodo por el que se envia
+            url: "/personJson", //nombre del endpoint
+            data:JSON.stringify({nombre:'Juan', apellido:'Parra'}), //Información que tiene que llegar al endpoint
+            dataType: 'json', //tipo de dato esperado como respuesta en el server
+            contentType: 'application/json' //valor por default
+        });
+    </script>
+</body>
+</html>
